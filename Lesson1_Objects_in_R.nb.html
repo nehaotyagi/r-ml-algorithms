@@ -1751,19 +1751,87 @@ summary {
 
 
 <!-- rnb-text-begin -->
+<div id="everything-in-r-is-an-object" class="section level1">
+<h1>Everything in R is an object</h1>
+</div>
+<div id="functions-to-identify-the-object" class="section level1">
+<h1>Functions to identify the object</h1>
+<p>class() - what kind of object is it (high-level)? typeof() - what is the object’s data type (low-level)? length() - how long is it? What about two dimensional objects? attributes() - does it have any metadata?</p>
+</div>
+<div id="data-types" class="section level1">
+<h1>Data Types</h1>
+<pre><code>*character*
+*numeric (real or decimal)*
+*integer*</code></pre>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGxvdChjYXJzKVxuYGBgIn0= -->
-<pre class="r"><code>plot(cars)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueCA8LSBcImhlbGxvXCJcbnkgPC0gMi40NVxueiA8LSAyTFxuXG5jYXQoXCJjbGFzcyBvZiB4IGlzIFwiLGNsYXNzKHgpKVxuXG5gYGAifQ== -->
+<pre class="r"><code>x &lt;- &quot;hello&quot;
+y &lt;- 2.45
+z &lt;- 2L
+
+cat(&quot;class of x is &quot;,class(x))
+</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiY2xhc3Mgb2YgeCBpcyAgY2hhcmFjdGVyXG4ifQ== -->
+<pre><code>class of x is  character</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoeSlcbmBgYCJ9 -->
+<pre class="r"><code>class(y)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwibnVtZXJpY1wiXG4ifQ== -->
+<pre><code>[1] &quot;numeric&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoeilcbmBgYCJ9 -->
+<pre class="r"><code>class(z)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiaW50ZWdlclwiXG4ifQ== -->
+<pre><code>[1] &quot;integer&quot;</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Add a new chunk by clicking the <em>Insert Chunk</em> button on the toolbar or by pressing <em>Ctrl+Alt+I</em>.</p>
-<p>When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the <em>Preview</em> button or press <em>Ctrl+Shift+K</em> to preview the HTML file).</p>
-<p>The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike <em>Knit</em>, <em>Preview</em> does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.</p>
+<pre><code>*logical*
+*complex*</code></pre>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYSA8LSB5ID4gelxuYiA8LSAxLTJpXG5cbmNhdChcImNsYXNzIG9mIGEgaXMgXCIsY2xhc3MoYSksIFwiOiBjbGFzcyBvZiBiIGlzIFwiLGNsYXNzKGIpKVxuXG5gYGAifQ== -->
+<pre class="r"><code>a &lt;- y &gt; z
+b &lt;- 1-2i
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIkxlc3NvbjE6IE9iamVjdHMgaW4gUiINCm91dHB1dDogaHRtbF9ub3RlYm9vaw0KYXV0aG9yOiAibmVoYW90eWFnaSINCi0tLQ0KDQoNCmBgYHtyfQ0KcGxvdChjYXJzKQ0KYGBgDQoNCkFkZCBhIG5ldyBjaHVuayBieSBjbGlja2luZyB0aGUgKkluc2VydCBDaHVuayogYnV0dG9uIG9uIHRoZSB0b29sYmFyIG9yIGJ5IHByZXNzaW5nICpDdHJsK0FsdCtJKi4NCg0KV2hlbiB5b3Ugc2F2ZSB0aGUgbm90ZWJvb2ssIGFuIEhUTUwgZmlsZSBjb250YWluaW5nIHRoZSBjb2RlIGFuZCBvdXRwdXQgd2lsbCBiZSBzYXZlZCBhbG9uZ3NpZGUgaXQgKGNsaWNrIHRoZSAqUHJldmlldyogYnV0dG9uIG9yIHByZXNzICpDdHJsK1NoaWZ0K0sqIHRvIHByZXZpZXcgdGhlIEhUTUwgZmlsZSkuDQoNClRoZSBwcmV2aWV3IHNob3dzIHlvdSBhIHJlbmRlcmVkIEhUTUwgY29weSBvZiB0aGUgY29udGVudHMgb2YgdGhlIGVkaXRvci4gQ29uc2VxdWVudGx5LCB1bmxpa2UgKktuaXQqLCAqUHJldmlldyogZG9lcyBub3QgcnVuIGFueSBSIGNvZGUgY2h1bmtzLiBJbnN0ZWFkLCB0aGUgb3V0cHV0IG9mIHRoZSBjaHVuayB3aGVuIGl0IHdhcyBsYXN0IHJ1biBpbiB0aGUgZWRpdG9yIGlzIGRpc3BsYXllZC4NCg==</div>
+cat(&quot;class of a is &quot;,class(a), &quot;: class of b is &quot;,class(b))
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiY2xhc3Mgb2YgYSBpcyAgbG9naWNhbCA6IGNsYXNzIG9mIGIgaXMgIGNvbXBsZXhcbiJ9 -->
+<pre><code>class of a is  logical : class of b is  complex</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="data-structures" class="section level1">
+<h1>Data Structures</h1>
+<pre><code>*atomic vector*
+*list*
+*matrix*
+*data frame*
+*factors*</code></pre>
+</div>
+<div id="classes-in-r" class="section level1">
+<h1>Classes in R</h1>
+<p>What is a class?<br />
+In object-oriented programming, a class is a blueprint for creating objects (a particular data structure), providing initial values for state (member variables or attributes), and implementations of behavior (member functions or methods). (<a href="https://brilliant.org/wiki/classes-oop/" class="uri">https://brilliant.org/wiki/classes-oop/</a>)</p>
+</div>
+<div id="s3-class" class="section level1">
+<h1>S3 class</h1>
+</div>
+<div id="s2-class" class="section level1">
+<h1>S2 class</h1>
+</div>
+<div id="reference-class" class="section level1">
+<h1>Reference class</h1>
+<!-- rnb-text-end -->
+</div>
+
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIkxlc3NvbjE6IE9iamVjdHMgaW4gUiINCm91dHB1dDogaHRtbF9ub3RlYm9vaw0KYXV0aG9yOiAibmVoYW90eWFnaSINCi0tLQ0KDQojIEV2ZXJ5dGhpbmcgaW4gUiBpcyBhbiBvYmplY3QNCg0KIyBGdW5jdGlvbnMgdG8gaWRlbnRpZnkgdGhlIG9iamVjdA0KY2xhc3MoKSAtIHdoYXQga2luZCBvZiBvYmplY3QgaXMgaXQgKGhpZ2gtbGV2ZWwpPw0KdHlwZW9mKCkgLSB3aGF0IGlzIHRoZSBvYmplY3TigJlzIGRhdGEgdHlwZSAobG93LWxldmVsKT8NCmxlbmd0aCgpIC0gaG93IGxvbmcgaXMgaXQ/IFdoYXQgYWJvdXQgdHdvIGRpbWVuc2lvbmFsIG9iamVjdHM/DQphdHRyaWJ1dGVzKCkgLSBkb2VzIGl0IGhhdmUgYW55IG1ldGFkYXRhPw0KDQojIERhdGEgVHlwZXMNCiAgICAqY2hhcmFjdGVyKg0KICAgICpudW1lcmljIChyZWFsIG9yIGRlY2ltYWwpKg0KICAgICppbnRlZ2VyKg0KDQpgYGB7cn0NCnggPC0gImhlbGxvIg0KeSA8LSAyLjQ1DQp6IDwtIDJMDQoNCmNhdCgiY2xhc3Mgb2YgeCBpcyAiLGNsYXNzKHgpKQ0KY2xhc3MoeSkNCmNsYXNzKHopDQpgYGANCiAgICAqbG9naWNhbCoNCiAgICAqY29tcGxleCoNCmBgYHtyfQ0KYSA8LSB5ID4geg0KYiA8LSAxLTJpDQoNCmNhdCgiY2xhc3Mgb2YgYSBpcyAiLGNsYXNzKGEpLCAiOiBjbGFzcyBvZiBiIGlzICIsY2xhc3MoYikpDQoNCmBgYA0KDQojIERhdGEgU3RydWN0dXJlcw0KICAgICphdG9taWMgdmVjdG9yKg0KICAgICpsaXN0Kg0KICAgICptYXRyaXgqDQogICAgKmRhdGEgZnJhbWUqDQogICAgKmZhY3RvcnMqDQoNCg0KDQojIENsYXNzZXMgaW4gUg0KDQpXaGF0IGlzIGEgY2xhc3M/ICANCkluIG9iamVjdC1vcmllbnRlZCBwcm9ncmFtbWluZywgYSBjbGFzcyBpcyBhIGJsdWVwcmludCBmb3IgY3JlYXRpbmcgb2JqZWN0cyAoYSBwYXJ0aWN1bGFyIGRhdGEgc3RydWN0dXJlKSwgcHJvdmlkaW5nIGluaXRpYWwgdmFsdWVzIGZvciBzdGF0ZSAobWVtYmVyIHZhcmlhYmxlcyBvciBhdHRyaWJ1dGVzKSwgYW5kIGltcGxlbWVudGF0aW9ucyBvZiBiZWhhdmlvciAobWVtYmVyIGZ1bmN0aW9ucyBvciBtZXRob2RzKS4gKGh0dHBzOi8vYnJpbGxpYW50Lm9yZy93aWtpL2NsYXNzZXMtb29wLykNCg0KIyBTMyBjbGFzcw0KDQojIFMyIGNsYXNzDQoNCiMgUmVmZXJlbmNlIGNsYXNz</div>
 
 
 

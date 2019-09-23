@@ -4,13 +4,54 @@ output: html_notebook
 author: "nehaotyagi"
 ---
 
+# Everything in R is an object
+
+# Functions to identify the object
+class() - what kind of object is it (high-level)?
+typeof() - what is the object’s data type (low-level)?
+length() - how long is it? What about two dimensional objects?
+attributes() - does it have any metadata?
+
+# Data Types
+    *character*
+    *numeric (real or decimal)*
+    *integer*
 
 ```{r}
-plot(cars)
+x <- "hello"
+y <- 2.45
+z <- 2L
+
+cat("class of x is ",class(x))
+class(y)
+class(z)
+```
+    *logical*
+    *complex*
+```{r}
+a <- y > z
+b <- 1-2i
+
+cat("class of a is ",class(a), ": class of b is ",class(b))
+
 ```
 
-Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+# Data Structures
+    *atomic vector*
+    *list*
+    *matrix*
+    *data frame*
+    *factors*
 
-When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
 
-The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+
+# Classes in R
+
+What is a class?  
+In object-oriented programming, a class is a blueprint for creating objects (a particular data structure), providing initial values for state (member variables or attributes), and implementations of behavior (member functions or methods). (https://brilliant.org/wiki/classes-oop/)
+
+# S3 class
+
+# S2 class
+
+# Reference class
