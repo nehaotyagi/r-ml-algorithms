@@ -22,29 +22,88 @@ x <- "hello"
 y <- 2.45
 z <- 2L
 
-cat("class of x is ",class(x))
-class(y)
-class(z)
+cat("class of x is:",class(x), "; typeof x is:", typeof(x), "\n")
+cat("class of y is:",class(y), "; typeof y is:", typeof(y), "\n")
+cat("class of z is:",class(z), "; typeof z is:", typeof(z), "\n")
+
 ```
-    *logical*
-    *complex*
+
+*logical*
+*complex*
+
 ```{r}
 a <- y > z
 b <- 1-2i
 
-cat("class of a is ",class(a), ": class of b is ",class(b))
+cat("class of a is:",class(a), "; class of b is:",class(b))
 
 ```
 
 # Data Structures
-    *atomic vector*
-    *list*
-    *matrix*
-    *data frame*
-    *factors*
+    Homogeneous
+      1D: Atomic Vector; 2D: Matrix; 3D: Array
+    Heterogeneous
+      1D: List; 2D: Data Frame
+    
+*Vectors*
+    *atomic vector* - all elements of an atomic vector must be the same type
+    *list* - elements of a list can have different types
 
+```{r}
+w <- c(1,2,3,4)
+x <- "hello"
+y <- c("hello", 2L)
+z <- list("hello", 2L)
 
+cat("w is an atomic vector:", is.atomic(w), " w is a list:", is.list(w), "\n")
+cat("x is an atomic vector:", is.atomic(y), " x is a list:", is.list(y), "\n")
+cat("y is an atomic vector:", is.atomic(y), " y is a list:", is.list(y), "\n")
+cat("z is an atomic vector:", is.atomic(z), " z is a list:", is.list(z), "\n")
 
+# Note
+a <- 2
+cat("a is an atomic vector:", is.atomic(a), " length of a is:", length(a), "\n")
+
+a[3] <- 4 # Can I add elements to this vector a?
+a
+cat("a is an atomic vector:", is.atomic(a), " length of a is:", length(a), "\n")
+
+a[0]    # Does index 0 exist?
+```
+# Observations: 
+is.vector() returns TRUE if the object is a vector with no attributes other than names. 
+is.atomic() or is.list can be used to test the type of the vector
+A scalar is stored in R as a vector of length 1.  It allows us to add elements to it
+Indexing in R begins at 1; numeric(0) indicates vector of length 0 i.e. empty
+
+# Vector recycling
+    If R encounters two vectors of different lengths in a binary operation, 
+    it replicates (recycles) the smaller vector until it is the same length as the longest vector 
+    and then it does the operation.
+```{r}
+a <- 1:3
+b <- 2:5
+a
+b
+a + b
+```
+
+*matrix*
+```{r}
+
+```
+
+*data frame*
+```{r}
+
+```
+
+*factors*
+```{r}
+
+```
+# Attributes in R
+    
 # Classes in R
 
 What is a class?  

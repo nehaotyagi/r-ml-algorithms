@@ -1765,55 +1765,141 @@ summary {
 *integer*</code></pre>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueCA8LSBcImhlbGxvXCJcbnkgPC0gMi40NVxueiA8LSAyTFxuXG5jYXQoXCJjbGFzcyBvZiB4IGlzIFwiLGNsYXNzKHgpKVxuXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueCA8LSBcImhlbGxvXCJcbnkgPC0gMi40NVxueiA8LSAyTFxuXG5jYXQoXCJjbGFzcyBvZiB4IGlzOlwiLGNsYXNzKHgpLCBcIjt0eXBlb2YgeCBpczpcIiwgdHlwZW9mKHgpLCBcIlxcblwiKVxuXG5gYGAifQ== -->
 <pre class="r"><code>x &lt;- &quot;hello&quot;
 y &lt;- 2.45
 z &lt;- 2L
 
-cat(&quot;class of x is &quot;,class(x))
+cat(&quot;class of x is:&quot;,class(x), &quot;;typeof x is:&quot;, typeof(x), &quot;\n&quot;)
 </code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiY2xhc3Mgb2YgeCBpcyAgY2hhcmFjdGVyXG4ifQ== -->
-<pre><code>class of x is  character</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiY2xhc3Mgb2YgeCBpczogY2hhcmFjdGVyIDt0eXBlb2YgeCBpczogY2hhcmFjdGVyIFxuIn0= -->
+<pre><code>class of x is: character ;typeof x is: character </code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoeSlcbmBgYCJ9 -->
-<pre class="r"><code>class(y)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2F0KFwiY2xhc3Mgb2YgeSBpczpcIixjbGFzcyh5KSwgXCI7dHlwZW9mIHkgaXM6XCIsIHR5cGVvZih5KSwgXCJcXG5cIilcbmBgYCJ9 -->
+<pre class="r"><code>cat(&quot;class of y is:&quot;,class(y), &quot;;typeof y is:&quot;, typeof(y), &quot;\n&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwibnVtZXJpY1wiXG4ifQ== -->
-<pre><code>[1] &quot;numeric&quot;</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiY2xhc3Mgb2YgeSBpczogbnVtZXJpYyA7dHlwZW9mIHkgaXM6IGRvdWJsZSBcbiJ9 -->
+<pre><code>class of y is: numeric ;typeof y is: double </code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoeilcbmBgYCJ9 -->
-<pre class="r"><code>class(z)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2F0KFwiY2xhc3Mgb2YgeiBpczpcIixjbGFzcyh6KSwgXCI7dHlwZW9mIHogaXM6XCIsIHR5cGVvZih6KSwgXCJcXG5cIilcbmBgYCJ9 -->
+<pre class="r"><code>cat(&quot;class of z is:&quot;,class(z), &quot;;typeof z is:&quot;, typeof(z), &quot;\n&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiaW50ZWdlclwiXG4ifQ== -->
-<pre><code>[1] &quot;integer&quot;</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiY2xhc3Mgb2YgeiBpczogaW50ZWdlciA7dHlwZW9mIHogaXM6IGludGVnZXIgXG4ifQ== -->
+<pre><code>class of z is: integer ;typeof z is: integer </code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<pre><code>*logical*
-*complex*</code></pre>
+<p><em>logical</em> <em>complex</em></p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYSA8LSB5ID4gelxuYiA8LSAxLTJpXG5cbmNhdChcImNsYXNzIG9mIGEgaXMgXCIsY2xhc3MoYSksIFwiOiBjbGFzcyBvZiBiIGlzIFwiLGNsYXNzKGIpKVxuXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYSA8LSB5ID4gelxuYiA8LSAxLTJpXG5cbmNhdChcImNsYXNzIG9mIGEgaXM6XCIsY2xhc3MoYSksIFwiOyBjbGFzcyBvZiBiIGlzOlwiLGNsYXNzKGIpKVxuXG5gYGAifQ== -->
 <pre class="r"><code>a &lt;- y &gt; z
 b &lt;- 1-2i
 
-cat(&quot;class of a is &quot;,class(a), &quot;: class of b is &quot;,class(b))
+cat(&quot;class of a is:&quot;,class(a), &quot;; class of b is:&quot;,class(b))
 </code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiY2xhc3Mgb2YgYSBpcyAgbG9naWNhbCA6IGNsYXNzIG9mIGIgaXMgIGNvbXBsZXhcbiJ9 -->
-<pre><code>class of a is  logical : class of b is  complex</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiY2xhc3Mgb2YgYSBpczogbG9naWNhbCA7IGNsYXNzIG9mIGIgaXM6IGNvbXBsZXhcbiJ9 -->
+<pre><code>class of a is: logical ; class of b is: complex</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
 <div id="data-structures" class="section level1">
 <h1>Data Structures</h1>
-<pre><code>*atomic vector*
-*list*
-*matrix*
-*data frame*
-*factors*</code></pre>
+<pre><code>Homogeneous
+  1D: Atomic Vector; 2D: Matrix; 3D: Array
+Heterogeneous
+  1D: List; 2D: Data Frame</code></pre>
+<p><em>Vectors</em> <em>atomic vector</em> - all elements of an atomic vector must be the same type <em>list</em> - elements of a list can have different types</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYSA8LSAyXG5jYXQoXCJhIGlzIGFuIGF0b21pYyB2ZWN0b3I6XCIsIGlzLmF0b21pYyhhKSwgXCIgbGVuZ3RoIG9mIGEgaXM6XCIsIGxlbmd0aChhKSwgXCJcXG5cIilcblxuYGBgIn0= -->
+<pre class="r"><code>a &lt;- 2
+cat(&quot;a is an atomic vector:&quot;, is.atomic(a), &quot; length of a is:&quot;, length(a), &quot;\n&quot;)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiYSBpcyBhbiBhdG9taWMgdmVjdG9yOiBUUlVFICBsZW5ndGggb2YgYSBpczogMSBcbiJ9 -->
+<pre><code>a is an atomic vector: TRUE  length of a is: 1 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYVszXSA8LSA0ICMgQ2FuIEkgYWRkIGVsZW1lbnRzIHRvIHRoaXMgdmVjdG9yIGE/XG5hXG5gYGAifQ== -->
+<pre class="r"><code>a[3] &lt;- 4 # Can I add elements to this vector a?
+a</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdICAyIE5BICA0XG4ifQ== -->
+<pre><code>[1]  2 NA  4</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2F0KFwiYSBpcyBhbiBhdG9taWMgdmVjdG9yOlwiLCBpcy5hdG9taWMoYSksIFwiIGxlbmd0aCBvZiBhIGlzOlwiLCBsZW5ndGgoYSksIFwiXFxuXCIpXG5gYGAifQ== -->
+<pre class="r"><code>cat(&quot;a is an atomic vector:&quot;, is.atomic(a), &quot; length of a is:&quot;, length(a), &quot;\n&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiYSBpcyBhbiBhdG9taWMgdmVjdG9yOiBUUlVFICBsZW5ndGggb2YgYSBpczogMyBcbiJ9 -->
+<pre><code>a is an atomic vector: TRUE  length of a is: 3 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYVswXSAgICAjIERvZXMgaW5kZXggMCBleGlzdD9cbmBgYCJ9 -->
+<pre class="r"><code>a[0]    # Does index 0 exist?</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoibnVtZXJpYygwKVxuIn0= -->
+<pre><code>numeric(0)</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="observations" class="section level1">
+<h1>Observations:</h1>
+<p>is.vector() returns TRUE if the object is a vector with no attributes other than names. is.atomic() or is.list can be used to test the type of the vector A scalar is stored in R as a vector of length 1. It allows us to add elements to it Indexing in R begins at 1; numeric(0) indicates vector of length 0 i.e. empty</p>
+</div>
+<div id="vector-recycling" class="section level1">
+<h1>Vector recycling</h1>
+<pre><code>If R encounters two vectors of different lengths in a binary operation, 
+it replicates (recycles) the smaller vector until it is the same length as the longest vector 
+and then it does the operation.</code></pre>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYSA8LSAxOjNcbmIgPC0gMjo1XG5hXG5cbmBgYCJ9 -->
+<pre class="r"><code>a &lt;- 1:3
+b &lt;- 2:5
+a
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDEgMiAzXG4ifQ== -->
+<pre><code>[1] 1 2 3</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYlxuYGBgIn0= -->
+<pre class="r"><code>b</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDIgMyA0IDVcbiJ9 -->
+<pre><code>[1] 2 3 4 5</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYSArIGJcbmBgYCJ9 -->
+<pre class="r"><code>a + b</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoibG9uZ2VyIG9iamVjdCBsZW5ndGggaXMgbm90IGEgbXVsdGlwbGUgb2Ygc2hvcnRlciBvYmplY3QgbGVuZ3RoXG4ifQ== -->
+<pre><code>longer object length is not a multiple of shorter object length</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDMgNSA3IDZcbiJ9 -->
+<pre><code>[1] 3 5 7 6</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p><em>matrix</em></p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p><em>data frame</em></p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p><em>factors</em></p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="attributes-in-r" class="section level1">
+<h1>Attributes in R</h1>
 </div>
 <div id="classes-in-r" class="section level1">
 <h1>Classes in R</h1>
@@ -1831,7 +1917,7 @@ In object-oriented programming, a class is a blueprint for creating objects (a p
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIkxlc3NvbjE6IE9iamVjdHMgaW4gUiINCm91dHB1dDogaHRtbF9ub3RlYm9vaw0KYXV0aG9yOiAibmVoYW90eWFnaSINCi0tLQ0KDQojIEV2ZXJ5dGhpbmcgaW4gUiBpcyBhbiBvYmplY3QNCg0KIyBGdW5jdGlvbnMgdG8gaWRlbnRpZnkgdGhlIG9iamVjdA0KY2xhc3MoKSAtIHdoYXQga2luZCBvZiBvYmplY3QgaXMgaXQgKGhpZ2gtbGV2ZWwpPw0KdHlwZW9mKCkgLSB3aGF0IGlzIHRoZSBvYmplY3TigJlzIGRhdGEgdHlwZSAobG93LWxldmVsKT8NCmxlbmd0aCgpIC0gaG93IGxvbmcgaXMgaXQ/IFdoYXQgYWJvdXQgdHdvIGRpbWVuc2lvbmFsIG9iamVjdHM/DQphdHRyaWJ1dGVzKCkgLSBkb2VzIGl0IGhhdmUgYW55IG1ldGFkYXRhPw0KDQojIERhdGEgVHlwZXMNCiAgICAqY2hhcmFjdGVyKg0KICAgICpudW1lcmljIChyZWFsIG9yIGRlY2ltYWwpKg0KICAgICppbnRlZ2VyKg0KDQpgYGB7cn0NCnggPC0gImhlbGxvIg0KeSA8LSAyLjQ1DQp6IDwtIDJMDQoNCmNhdCgiY2xhc3Mgb2YgeCBpcyAiLGNsYXNzKHgpKQ0KY2xhc3MoeSkNCmNsYXNzKHopDQpgYGANCiAgICAqbG9naWNhbCoNCiAgICAqY29tcGxleCoNCmBgYHtyfQ0KYSA8LSB5ID4geg0KYiA8LSAxLTJpDQoNCmNhdCgiY2xhc3Mgb2YgYSBpcyAiLGNsYXNzKGEpLCAiOiBjbGFzcyBvZiBiIGlzICIsY2xhc3MoYikpDQoNCmBgYA0KDQojIERhdGEgU3RydWN0dXJlcw0KICAgICphdG9taWMgdmVjdG9yKg0KICAgICpsaXN0Kg0KICAgICptYXRyaXgqDQogICAgKmRhdGEgZnJhbWUqDQogICAgKmZhY3RvcnMqDQoNCg0KDQojIENsYXNzZXMgaW4gUg0KDQpXaGF0IGlzIGEgY2xhc3M/ICANCkluIG9iamVjdC1vcmllbnRlZCBwcm9ncmFtbWluZywgYSBjbGFzcyBpcyBhIGJsdWVwcmludCBmb3IgY3JlYXRpbmcgb2JqZWN0cyAoYSBwYXJ0aWN1bGFyIGRhdGEgc3RydWN0dXJlKSwgcHJvdmlkaW5nIGluaXRpYWwgdmFsdWVzIGZvciBzdGF0ZSAobWVtYmVyIHZhcmlhYmxlcyBvciBhdHRyaWJ1dGVzKSwgYW5kIGltcGxlbWVudGF0aW9ucyBvZiBiZWhhdmlvciAobWVtYmVyIGZ1bmN0aW9ucyBvciBtZXRob2RzKS4gKGh0dHBzOi8vYnJpbGxpYW50Lm9yZy93aWtpL2NsYXNzZXMtb29wLykNCg0KIyBTMyBjbGFzcw0KDQojIFMyIGNsYXNzDQoNCiMgUmVmZXJlbmNlIGNsYXNz</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIkxlc3NvbjE6IE9iamVjdHMgaW4gUiINCm91dHB1dDogaHRtbF9ub3RlYm9vaw0KYXV0aG9yOiAibmVoYW90eWFnaSINCi0tLQ0KDQojIEV2ZXJ5dGhpbmcgaW4gUiBpcyBhbiBvYmplY3QNCg0KIyBGdW5jdGlvbnMgdG8gaWRlbnRpZnkgdGhlIG9iamVjdA0KY2xhc3MoKSAtIHdoYXQga2luZCBvZiBvYmplY3QgaXMgaXQgKGhpZ2gtbGV2ZWwpPw0KdHlwZW9mKCkgLSB3aGF0IGlzIHRoZSBvYmplY3TigJlzIGRhdGEgdHlwZSAobG93LWxldmVsKT8NCmxlbmd0aCgpIC0gaG93IGxvbmcgaXMgaXQ/IFdoYXQgYWJvdXQgdHdvIGRpbWVuc2lvbmFsIG9iamVjdHM/DQphdHRyaWJ1dGVzKCkgLSBkb2VzIGl0IGhhdmUgYW55IG1ldGFkYXRhPw0KDQojIERhdGEgVHlwZXMNCiAgICAqY2hhcmFjdGVyKg0KICAgICpudW1lcmljIChyZWFsIG9yIGRlY2ltYWwpKg0KICAgICppbnRlZ2VyKg0KDQpgYGB7cn0NCnggPC0gImhlbGxvIg0KeSA8LSAyLjQ1DQp6IDwtIDJMDQoNCmNhdCgiY2xhc3Mgb2YgeCBpczoiLGNsYXNzKHgpLCAiOyB0eXBlb2YgeCBpczoiLCB0eXBlb2YoeCksICJcbiIpDQpjYXQoImNsYXNzIG9mIHkgaXM6IixjbGFzcyh5KSwgIjsgdHlwZW9mIHkgaXM6IiwgdHlwZW9mKHkpLCAiXG4iKQ0KY2F0KCJjbGFzcyBvZiB6IGlzOiIsY2xhc3MoeiksICI7IHR5cGVvZiB6IGlzOiIsIHR5cGVvZih6KSwgIlxuIikNCg0KYGBgDQoNCipsb2dpY2FsKg0KKmNvbXBsZXgqDQoNCmBgYHtyfQ0KYSA8LSB5ID4geg0KYiA8LSAxLTJpDQoNCmNhdCgiY2xhc3Mgb2YgYSBpczoiLGNsYXNzKGEpLCAiOyBjbGFzcyBvZiBiIGlzOiIsY2xhc3MoYikpDQoNCmBgYA0KDQojIERhdGEgU3RydWN0dXJlcw0KICAgIEhvbW9nZW5lb3VzDQogICAgICAxRDogQXRvbWljIFZlY3RvcjsgMkQ6IE1hdHJpeDsgM0Q6IEFycmF5DQogICAgSGV0ZXJvZ2VuZW91cw0KICAgICAgMUQ6IExpc3Q7IDJEOiBEYXRhIEZyYW1lDQogICAgDQoqVmVjdG9ycyoNCiAgICAqYXRvbWljIHZlY3RvciogLSBhbGwgZWxlbWVudHMgb2YgYW4gYXRvbWljIHZlY3RvciBtdXN0IGJlIHRoZSBzYW1lIHR5cGUNCiAgICAqbGlzdCogLSBlbGVtZW50cyBvZiBhIGxpc3QgY2FuIGhhdmUgZGlmZmVyZW50IHR5cGVzDQoNCmBgYHtyfQ0KdyA8LSBjKDEsMiwzLDQpDQp4IDwtICJoZWxsbyINCnkgPC0gYygiaGVsbG8iLCAyTCkNCnogPC0gbGlzdCgiaGVsbG8iLCAyTCkNCg0KY2F0KCJ3IGlzIGFuIGF0b21pYyB2ZWN0b3I6IiwgaXMuYXRvbWljKHcpLCAiIHcgaXMgYSBsaXN0OiIsIGlzLmxpc3QodyksICJcbiIpDQpjYXQoInggaXMgYW4gYXRvbWljIHZlY3RvcjoiLCBpcy5hdG9taWMoeSksICIgeCBpcyBhIGxpc3Q6IiwgaXMubGlzdCh5KSwgIlxuIikNCmNhdCgieSBpcyBhbiBhdG9taWMgdmVjdG9yOiIsIGlzLmF0b21pYyh5KSwgIiB5IGlzIGEgbGlzdDoiLCBpcy5saXN0KHkpLCAiXG4iKQ0KY2F0KCJ6IGlzIGFuIGF0b21pYyB2ZWN0b3I6IiwgaXMuYXRvbWljKHopLCAiIHogaXMgYSBsaXN0OiIsIGlzLmxpc3QoeiksICJcbiIpDQoNCiMgTm90ZQ0KYSA8LSAyDQpjYXQoImEgaXMgYW4gYXRvbWljIHZlY3RvcjoiLCBpcy5hdG9taWMoYSksICIgbGVuZ3RoIG9mIGEgaXM6IiwgbGVuZ3RoKGEpLCAiXG4iKQ0KDQphWzNdIDwtIDQgIyBDYW4gSSBhZGQgZWxlbWVudHMgdG8gdGhpcyB2ZWN0b3IgYT8NCmENCmNhdCgiYSBpcyBhbiBhdG9taWMgdmVjdG9yOiIsIGlzLmF0b21pYyhhKSwgIiBsZW5ndGggb2YgYSBpczoiLCBsZW5ndGgoYSksICJcbiIpDQoNCmFbMF0gICAgIyBEb2VzIGluZGV4IDAgZXhpc3Q/DQpgYGANCiMgT2JzZXJ2YXRpb25zOiANCmlzLnZlY3RvcigpIHJldHVybnMgVFJVRSBpZiB0aGUgb2JqZWN0IGlzIGEgdmVjdG9yIHdpdGggbm8gYXR0cmlidXRlcyBvdGhlciB0aGFuIG5hbWVzLiANCmlzLmF0b21pYygpIG9yIGlzLmxpc3QgY2FuIGJlIHVzZWQgdG8gdGVzdCB0aGUgdHlwZSBvZiB0aGUgdmVjdG9yDQpBIHNjYWxhciBpcyBzdG9yZWQgaW4gUiBhcyBhIHZlY3RvciBvZiBsZW5ndGggMS4gIEl0IGFsbG93cyB1cyB0byBhZGQgZWxlbWVudHMgdG8gaXQNCkluZGV4aW5nIGluIFIgYmVnaW5zIGF0IDE7IG51bWVyaWMoMCkgaW5kaWNhdGVzIHZlY3RvciBvZiBsZW5ndGggMCBpLmUuIGVtcHR5DQoNCiMgVmVjdG9yIHJlY3ljbGluZw0KICAgIElmIFIgZW5jb3VudGVycyB0d28gdmVjdG9ycyBvZiBkaWZmZXJlbnQgbGVuZ3RocyBpbiBhIGJpbmFyeSBvcGVyYXRpb24sIA0KICAgIGl0IHJlcGxpY2F0ZXMgKHJlY3ljbGVzKSB0aGUgc21hbGxlciB2ZWN0b3IgdW50aWwgaXQgaXMgdGhlIHNhbWUgbGVuZ3RoIGFzIHRoZSBsb25nZXN0IHZlY3RvciANCiAgICBhbmQgdGhlbiBpdCBkb2VzIHRoZSBvcGVyYXRpb24uDQpgYGB7cn0NCmEgPC0gMTozDQpiIDwtIDI6NQ0KYQ0KYg0KYSArIGINCmBgYA0KDQoqbWF0cml4Kg0KYGBge3J9DQoNCmBgYA0KDQoqZGF0YSBmcmFtZSoNCmBgYHtyfQ0KDQpgYGANCg0KKmZhY3RvcnMqDQpgYGB7cn0NCg0KYGBgDQojIEF0dHJpYnV0ZXMgaW4gUg0KICAgIA0KIyBDbGFzc2VzIGluIFINCg0KV2hhdCBpcyBhIGNsYXNzPyAgDQpJbiBvYmplY3Qtb3JpZW50ZWQgcHJvZ3JhbW1pbmcsIGEgY2xhc3MgaXMgYSBibHVlcHJpbnQgZm9yIGNyZWF0aW5nIG9iamVjdHMgKGEgcGFydGljdWxhciBkYXRhIHN0cnVjdHVyZSksIHByb3ZpZGluZyBpbml0aWFsIHZhbHVlcyBmb3Igc3RhdGUgKG1lbWJlciB2YXJpYWJsZXMgb3IgYXR0cmlidXRlcyksIGFuZCBpbXBsZW1lbnRhdGlvbnMgb2YgYmVoYXZpb3IgKG1lbWJlciBmdW5jdGlvbnMgb3IgbWV0aG9kcykuIChodHRwczovL2JyaWxsaWFudC5vcmcvd2lraS9jbGFzc2VzLW9vcC8pDQoNCiMgUzMgY2xhc3MNCg0KIyBTMiBjbGFzcw0KDQojIFJlZmVyZW5jZSBjbGFzcw==</div>
 
 
 
